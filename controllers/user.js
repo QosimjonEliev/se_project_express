@@ -19,7 +19,7 @@ const createUser = (req, res) => {
     .hash(password, 10)
     .then((hash) => User.create({ name, avatar, email, password: hash }))
     .then((data) => {
-      res.send({name: data.name, avatar: data.avatar, email: data.email, password: data.password});
+      res.send({name: data.name, avatar: data.avatar, email: data.email,});
     })
     .catch((err) => {
       console.error(err);
