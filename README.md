@@ -2,6 +2,11 @@
 
 This project is the back end to a front-end app called WTWR. It will store user data and information about their preferred clothing items for weather conditions.
 
+### Link to github repository
+
+https://github.com/QosimjonEliev/se_project_express
+
+
 ## Running the Project
 
 `npm run start` — to launch the server

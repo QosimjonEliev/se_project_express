@@ -19,10 +19,11 @@ const createItem = (req, res) => {
         res.status(BAD_REQUEST).send({
           message: err.message,
         });
+      } else {
+        res
+          .status(DEFAULT_ERROR)
+          .send({ message: "An error has occurred on the server." });
       }
-      res
-        .status(DEFAULT_ERROR)
-        .send({ message: "An error has occurred on the server." });
     });
 };
 
