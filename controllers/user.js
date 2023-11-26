@@ -18,8 +18,8 @@ const createUser = (req, res) => {
   bcrypt
     .hash(password, 10)
     .then((hash) => User.create({ name, avatar, email, password: hash }))
-    .then((data) => {
-      res.send({name: data.name, avatar: data.avatar, email: data.email,});
+    .then(({ newName, newAvatar, newEmail }) => {
+      res.send({ newName, newAvatar, newEmail });
     })
     .catch((err) => {
       console.error(err);
@@ -40,7 +40,7 @@ const createUser = (req, res) => {
     });
 };
 
-const userLogin = (req, res) => {
+const loginUser = (req, res) => {
   const { email, password } = req.body;
 
   return User.findUserByCredentials(email, password)
@@ -89,7 +89,7 @@ const getCurrentUser = (req, res) => {
     });
 };
 
-const usersUpdate = (req, res) => {
+const updateUser = (req, res) => {
   const { name, avatar } = req.body;
   const userId = req.user._id;
 
@@ -125,7 +125,7 @@ const usersUpdate = (req, res) => {
 
 module.exports = {
   createUser,
-  userLogin,
+  loginUser,
   getCurrentUser,
-  usersUpdate,
+  updateUser,
 };

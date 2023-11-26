@@ -11,7 +11,7 @@ const createItem = (req, res) => {
 
   ClothingItem.create({ name, weather, imageUrl, owner: req.user._id, likes })
     .then((item) => {
-      res.send({ data: item });
+      res.send(item);
     })
     .catch((err) => {
       console.error(err);
@@ -19,11 +19,10 @@ const createItem = (req, res) => {
         res.status(BAD_REQUEST).send({
           message: err.message,
         });
-      } else {
-        res
-          .status(DEFAULT_ERROR)
-          .send({ message: "An error has occurred on the server." });
       }
+      res
+        .status(DEFAULT_ERROR)
+        .send({ message: "An error has occurred on the server." });
     });
 };
 
@@ -79,7 +78,7 @@ const likeItem = (req, res) => {
     { new: true },
   )
     .orFail()
-    .then((item) => res.send({ data: item }))
+    .then((item) => res.send(item))
     .catch((err) => {
       console.error(err);
       if (err.name === "DocumentNotFoundError") {
@@ -102,11 +101,11 @@ const likeItem = (req, res) => {
 const dislikeItem = (req, res) => {
   ClothingItem.findByIdAndUpdate(
     req.params.itemId,
-    { $pull: { likes: req.user._id } }, // remove _id from the array
+    { $pull: { likes: req.user._id } },
     { new: true },
   )
     .orFail()
-    .then((item) => res.send({ data: item }))
+    .then((item) => res.send(item))
     .catch((err) => {
       console.error(err);
       if (err.name === "DocumentNotFoundError") {
