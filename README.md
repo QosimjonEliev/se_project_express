@@ -1,17 +1,21 @@
-### WTWR (What to Wear?): Back End
+# WTWR (What to Wear?)
 
-This project is the back end to a front-end app called WTWR. It will store user data and information about their preferred clothing items for weather conditions.
+## About the project
 
-### Link to github repository
-https://github.com/QosimjonEliev/se_project_express
+The idea of the application is pretty simple - we make a call to an API, which then responds with the daily weather forecast. We collect the weather data, process it, and then based on the forecast, we recommend suitable clothing to the user.
 
-### Running the Project
-npm run start — to launch the server
+## Tools and Technology Used
 
-npm run dev — to launch the server with the hot reload feature
+This application currently uses HTML, CSS, Javascript, and React. It is also mobile friendly/responsive.
 
-### Testing
-Before committing your code, make sure you edit the file sprint.txt in the root folder. The file sprint.txt should contain the number of the sprint you're currently working on. For ex. 12
+## Links
 
-### Technologies
-In this project we used express, Postman, mongoDB and structured by using JavaScript.
+- [Figma Design](https://www.figma.com/file/DTojSwldenF9UPKQZd6RRb/Sprint-10%3A-WTWR)
+- [Github Repo](https://github.com/QosimjonEliev/se_project_react)
+- [Express Repo](https://github.com/QosimjonEliev/se_project_express)
+
+## Plans for Improvement
+
+Future improvements include adding more weather types and clothing recommendations.
+Eventually users will be able to add their own clothing selections for different weather variations.
+It'd also be great to update weather location automatically by IP address location.
