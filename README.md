@@ -15,3 +15,8 @@ Before committing your code, make sure you edit the file sprint.txt in the root 
 
 ### Technologies
 In this project we used express, Postman, mongoDB and structured by using JavaScript.
+
+### Domain Name:
+
+- [Domain Name](https://api.wtwr.eqr.com, www.wtwr.eqr.com)
+- [Domain Link](api.wtwr.eqr.com)

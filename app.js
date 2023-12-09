@@ -22,14 +22,6 @@ app.use(express.json());
 const routes = require("./routes");
 
 app.use(helmet());
-
-app.use((req, res, next) => {
-  req.user = {
-    _id: "6514eed45b23e9679f955231", // paste the _id of the test user created in the previous step
-  };
-  next();
-});
-
 app.use(requestLogger);
 app.use(routes);
 app.use(errorLogger);
