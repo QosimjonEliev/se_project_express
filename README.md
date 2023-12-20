@@ -18,5 +18,4 @@ In this project we used express, Postman, mongoDB and structured by using JavaSc
 
 ### Domain Name:
 
-- [Domain Name](https://api.wtwr.eqr.com, www.wtwr.eqr.com)
-- [Domain Link](api.wtwr.eqr.com)
+- [Domain Name](https://www.wtwr.eqr.crabdance.com, wtwr.eqr.crabdance.com)
